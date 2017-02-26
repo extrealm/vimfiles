@@ -45,6 +45,8 @@ Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 Plugin 'mzlogin/vim-markdown-toc'
 Plugin 'aklt/plantuml-syntax'
+"Plugin 'vim-scripts/taglist.vim'    " taglist
+"Plugin 'vim-scripts/Conque-GDB'
 call vundle#end()
 
 runtime macros/matchit.vim
@@ -61,8 +63,8 @@ set showmode    "show current mode down the bottom
 set number      "show line numbers
 
 "display tabs and trailing spaces
-set list
-set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
+"set list
+set listchars=tab:»·,trail:·,nbsp:·
 
 set incsearch   "find the next match as we type the search
 set hlsearch    "hilight searches by default
@@ -85,6 +87,8 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set autoindent
+set cindent
+set smartindent
 
 "folding settings
 set foldmethod=indent   "fold based on indent
@@ -116,9 +120,9 @@ if !has("nvim")
 endif
 
 "tell the term has 256 colors
-"set t_Co=256
+set t_Co=256
 
-colorscheme github
+colorscheme wintersday "wombat "vibrantink "dante "inkpot "blacksea "desert256 "darkblue "putty "xterm16 github default
 
 "hide buffers when not displayed
 set hidden
