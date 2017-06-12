@@ -61,6 +61,7 @@ set showcmd     "show incomplete cmds down the bottom
 set showmode    "show current mode down the bottom
 
 set number      "show line numbers
+"set relativenumber  "show line numbers useful relative command
 
 "display tabs and trailing spaces
 "set list
@@ -100,6 +101,7 @@ set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
 
 set formatoptions-=o "dont continue comments when pushing o/O
+set pastetoggle=<F3> "toggle paste mode on/off by f3-key, fyi, paste mode is ignoring formatoptions.
 
 "vertical/horizontal scroll off settings
 set scrolloff=3
@@ -402,6 +404,8 @@ vnoremap # :<C-u>call <SID>VSetSearch()<CR>??<CR>
 
 "gutentags settings
 let g:gutentags_exclude = ['vendor/*', 'tmp/*', 'log/*', 'coverage/*', 'doc/*']
+set statusline+=%{gutentags#statusline()}    " custom msg () > ([Generating])
+"let g:gutentags_generate_on_missing = 0     " avoid auto-gen for linux > 200MB
 
 "tmux-vim-navigator setup
 let g:tmux_navigator_no_mappings = 1
