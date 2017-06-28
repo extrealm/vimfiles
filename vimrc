@@ -339,6 +339,7 @@ let g:NERDTreeMinimalUI=1
 
 "tagbar settings
 let g:tagbar_sort = 0
+nnoremap <silent> <F9> :TagbarToggle<CR>
 
 "explorer mappings
 nnoremap <leader>bb :BufExplorer<cr>
